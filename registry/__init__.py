@@ -6,6 +6,9 @@ import os
 # Create an instance of Flask
 app = Flask(__name__)
 
+from . import db
+db.init_app(app)
+
 @app.route("/")
 def index():
     """Present some documentation"""
